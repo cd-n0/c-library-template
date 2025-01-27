@@ -1,14 +1,6 @@
 include config.mk
 
-all: debug
-
-# Debug build
-debug: CFLAGS += $(DEBUG_FLAGS)
-debug: $(TARGET)
-
-# Release build
-release: CFLAGS += $(RELEASE_FLAGS)
-release: $(TARGET)
+all: $(TARGET)
 
 # Clean target to remove compiled files
 clean:
@@ -53,4 +45,4 @@ test: $(TESTBINS)
 		./$$test && echo "TEST $$test OK" || echo "TEST $$test FAIL"; \
 	done
 
-.PHONY: all debug release clean
+.PHONY: all clean test

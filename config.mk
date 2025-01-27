@@ -18,4 +18,11 @@ TESTSRCS = $(wildcard $(TESTDIR)/*.c)
 TESTOBJS = $(patsubst $(TESTDIR)/%.c,$(TESTOBJDIR)/%.o,$(TESTSRCS))
 TESTBINS = $(patsubst $(TESTOBJDIR)/%.o,$(TESTBINDIR)/%,$(TESTOBJS))
 
+BUILD ?= debug
+ifeq ($(BUILD), debug)
+	CFLAGS += $(DEBUG_FLAGS)
+else ifeq ($(BUILD), release)
+	CFLAGS += $(RELEASE_FLAGS)
+endif
+
 TARGET = libtarget.a

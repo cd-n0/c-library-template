@@ -6,7 +6,7 @@ PROJECT_TITLE is...
 ```sh
 git clone GIT_URL
 cd PROJECT_NAME
-make release
+make BUILD=release
 ```
 
 ## Tests
