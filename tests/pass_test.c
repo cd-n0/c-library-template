@@ -1,4 +1,4 @@
-#include "include/functions.h"
+#include "../src/include/functions.h"
 #include <assert.h>
 
 int main(void){

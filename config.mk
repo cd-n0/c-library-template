@@ -1,5 +1,5 @@
 CC = gcc
-CFLAGS = -std=c89 -Wall -Wextra -Wpedantic -I$(SRCDIR)
+CFLAGS = -std=c89 -Wall -Wextra -Wpedantic
 LDLIBS = 
 DEBUG_FLAGS = -ggdb
 RELEASE_FLAGS = -O2
